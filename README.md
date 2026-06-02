@@ -19,9 +19,10 @@ The Odisha AI website is a modern, highly responsive, and beautifully designed w
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [React 18](https://react.dev/)
+- **Framework**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
-- **Routing**: [React Router v6](https://reactrouter.com/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
 - **Styling**: Vanilla CSS with comprehensive CSS Variables & custom animations (`index.css`)
 - **Icons**: [Lucide React](https://lucide.dev/)
 
@@ -30,7 +31,9 @@ The Odisha AI website is a modern, highly responsive, and beautifully designed w
 Follow these steps to set up the project locally:
 
 ### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on your machine.
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) and [pnpm](https://pnpm.io/installation) installed on your machine.
+
+> If you don't have pnpm yet, you can install it with `npm install -g pnpm` or `corepack enable`.
 
 ### Installation
 
@@ -42,12 +45,12 @@ Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on y
 
 2. **Install dependencies:**
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Run the development server:**
    ```bash
-   npm run dev
+   pnpm dev
    ```
    Open [http://localhost:5176](http://localhost:5176) (or the port provided in your terminal) to view the app in the browser.
 
@@ -55,9 +58,11 @@ Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on y
 
 To create an optimized production build:
 ```bash
-npm run build
+pnpm build
 ```
 The bundled files will be output to the `dist/` directory, ready to be deployed.
+
+You can preview the production build locally with `pnpm preview`, and lint the codebase with `pnpm lint`.
 
 ## 📁 Project Structure
 

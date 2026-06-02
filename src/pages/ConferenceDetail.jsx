@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Calendar, MapPin, Users, Mic } from 'lucide-react';
 import { useLanguage } from '../utils/LanguageContext';
+import { usePageMeta } from '../utils/usePageMeta';
 import Sponsorship from '../components/Sponsorship';
 
 /* ─── All conference data ─── */
@@ -172,6 +173,12 @@ export default function ConferenceDetail() {
   const { slug } = useParams();
   const conf = CONFERENCES[slug];
   const { t } = useLanguage();
+  usePageMeta({
+    title: conf ? conf.title : 'Conference',
+    path: `/conferences/${slug}`,
+    description: conf?.desc,
+    image: conf?.img,
+  });
 
   if (!conf) return (
     <div style={{ minHeight:'60vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'1.5rem' }}>
