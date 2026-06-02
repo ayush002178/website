@@ -1,44 +1,101 @@
 # Odisha AI Website
-This website is built using [Tabi](https://welpo.github.io/tabi/) theme for [Zola](https://www.getzola.org/).
 
-## Installation
+Welcome to the official repository for the **Odisha AI Website**. This portal serves as the digital home for the Odisha AI community—a global movement of educators, researchers, policy makers, and developers dedicated to democratizing AI education and fostering an AI-first ecosystem for Odisha and the global Odia diaspora.
 
-1. Install Zola from [here](https://www.getzola.org/documentation/getting-started/installation/).
-2. Clone this repository.
-    ```bash
-    git clone https://github.com/odisha-ml/website.git
-    cd website
-    git clone https://github.com/welpo/tabi.git themes/tabi
-    ```
-3. Run `zola serve` to start the development server.
-4. Open `127.0.0.1:1111` in your browser. Note that `localhost` is not supported.
+## 🌐 Overview
 
-## Contributing
+The Odisha AI website is a modern, highly responsive, and beautifully designed web application built to showcase:
+- **Conferences & Summits**: Tracking our annual international and regional AI conferences (e.g., Odisha AI Conference 2026).
+- **Initiatives**: Highlighting ongoing programs like the Rathathon (perpetual hackathon), AI Foundation Series, and Odia GenAI research.
+- **Resources**: Centralized links to vision documents, the AI glossary, and open-source Odia AI models.
+- **Community Blogs**: Updates, tutorials, and community chapter inaugurations.
 
-* Contributions are welcome! Please open an issue or submit a pull request.
-### Changing the HTML files
-* If you want to change anything in the template HTML files, please make the changes in the `/templates` directory. 
-* If the file is not present in the directory then copy it from the `/themes/tabi/templates` directory to the `/templates` directory. Please never make the changes in the `/themes/tabi/templates` directory. 
-* As it will be easy to get the updates from the Tabi theme easier.
+## ✨ Key Features
 
-### Creating a new page
-To add new content, create a new file in the `content` directory with the appropriate metadata. For example, to add a new page called "About", create a file called `about.md` in the `content` directory with the following content:
+- **Premium UI/UX Design**: Features a dark-mode-first aesthetic with glassmorphism, dynamic gradients, subtle micro-animations, and modern typography (Space Grotesk & Syne).
+- **Bilingual Support (i18n)**: Fully integrated localization framework offering seamless switching between **English** and **Odia**.
+- **Dynamic Content Routing**: Fast and smooth client-side routing.
+- **Sponsorship Integration**: Prominent visibility modules for community and corporate partners.
 
-```markdown
-+++
-title = "About"
-description = "About the Odisha AI community."
-date = 2024-07-22
-+++
+## 🛠️ Tech Stack
+
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **Styling**: Vanilla CSS with comprehensive CSS Variables & custom animations (`index.css`)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally:
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) and [pnpm](https://pnpm.io/installation) installed on your machine.
+
+> If you don't have pnpm yet, you can install it with `npm install -g pnpm` or `corepack enable`.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/odisha-ml/website.git
+   cd website
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   pnpm dev
+   ```
+   Open [http://localhost:5176](http://localhost:5176) (or the port provided in your terminal) to view the app in the browser.
+
+### Build for Production
+
+To create an optimized production build:
+```bash
+pnpm build
 ```
-There is no need to write anything on HTML, CSS, or JavaScript. The content is written in Markdown. You can use any Markdown editor to create the content.
+The bundled files will be output to the `dist/` directory, ready to be deployed.
 
-## License
+You can preview the production build locally with `pnpm preview`, and lint the codebase with `pnpm lint`.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📁 Project Structure
 
-## Page Score
-### Mobile
-![Page Score Mobile](/static/images/page-score-mobile.webp)
-### Desktop
-![Page Score Desktop](/static/images/page-score-desktop.webp)
+```text
+odisha-ai-website/
+├── static/              # Static assets (images, docs). Note: Vite is configured to use 'static' as publicDir
+├── src/
+│   ├── components/      # Reusable UI components (Navbar, Footer, Sponsorship, etc.)
+│   ├── pages/           # Route-specific page components (Home, Events, Blogs, etc.)
+│   ├── utils/           # Utilities, including the LanguageContext for i18n
+│   ├── App.jsx          # Main application router and layout wrapper
+│   ├── index.css        # Global CSS, design tokens, and utility classes
+│   └── main.jsx         # React application entry point
+├── vite.config.js       # Vite build configuration
+└── package.json         # Project dependencies and scripts
+```
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Whether you want to fix a bug, add a new feature, translate content into Odia, or improve the UI, your help is appreciated.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📧 Contact & Community
+
+- **Join us on WhatsApp**: [Odisha AI Community](https://chat.whatsapp.com/I5lG1GiGBboGjaD9P6c87t)
+- **Email**: info@odishaai.org
+- **Twitter / X**: [@odias_in_ai](https://twitter.com/odias_in_ai)
+- **LinkedIn**: [Odisha AI](https://www.linkedin.com/company/75029211)
+
+---
+*Empowering the Odia ecosystem for success in an AI-first era.*
