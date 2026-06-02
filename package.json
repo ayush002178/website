@@ -1,8 +1,12 @@
 {
-  "name": "temp-vite-app",
+  "name": "odisha-ai-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.33.3",
+  "engines": {
+    "node": ">=20.19"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
